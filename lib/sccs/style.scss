@@ -1,0 +1,305 @@
+@use "sass:color"; //usado para navegacion sitio botones cromados
+@import "../bootstrap/scss/bootstrap";
+
+
+/****************************** FUENTES *********************************/
+/************************************************************************/
+@font-face {
+    font-family: play;
+    src: url('../fonts/play/Play-Regular.ttf');
+}
+
+@font-face {
+    font-family: NotoSans;
+    src: url('../fonts/noto_nans/NotoSans-Regular.ttf');
+}
+.aa{
+    background-attachment: fixed;
+    background-color: #2A8FBD;
+}
+/*************************************************************************/
+/*************************************************************************/
+// Por scrollspy - bootstrap
+body {
+    position: relative;
+    font-family: NotoSans;
+    background-image: url("../../images/triangulo_left.jpg"), url("../../images/triangulo_right.jpg");
+    background-size: inherit;
+    background-position: left top, right top;
+    background-repeat: repeat-y, repeat-y;
+    
+  }
+#header{
+    background-image: url('../../images/cantera_3.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 15%;
+    background-attachment:local;
+
+    
+}
+#nosotros{
+    background-image: url('../../images/cantera_3.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 50%;
+    background-attachment:local;
+    min-height: 350px;
+}
+.nos-description{
+    background-color: rgba(0,0,0,0.6);
+}
+#logo-nav {
+    width: 20%;
+}
+
+
+@mixin gradient($direction, $list) { 
+    
+    background: -webkit-linear-gradient($direction, $list);
+    background: -moz-linear-gradient($direction, $list);
+    background: -o-linear-gradient($direction, $list);
+    background: linear-gradient($direction, $list);  
+  }
+
+//fondo gradiente para galleria de piedras
+$list-gradient-row : rgba(181,181,181,1) 0% , #fff 2%, #fff 97%, rgba(181,181,181,1) 100%;
+.wrap-stone-row{
+    border-left: 1px solid #cecece;
+    border-right: 1px solid #cecece;
+    @include gradient(top, $list-gradient-row);
+}
+/* CUSTOMIZE THE CAROUSEL
+--------------------------------------------------
+*/
+
+/* Carousel base class */
+.carousel {
+    margin-bottom: 4rem;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+    height: 32rem;
+    cursor: pointer;
+}
+
+.stone-gallery.carousel-item.active {
+    cursor: pointer;
+}
+.sizes-gallery{
+    cursor: zoom-in;
+}
+
+.carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+}
+
+
+.map-container-6 {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-container-6 iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+
+/***************************************************************************/
+/***************************************************************************/
+/***************************************************************************/
+/* ESTILO DE BARRA DE NAVEGACION PERSONALIZADA*/
+/***************************************************************************/
+/***************************************************************************/
+/***************************************************************************/
+
+
+
+$clr-default: #000;
+$clr-primary: #2A8FBD;
+$clr-success: #7FAF1B;
+$clr-warning: #FBB829;
+$clr-danger: #F02311;
+$clr-info: #6CDFEA;
+
+$b: 7.5%;
+
+$gloss : repeating-linear-gradient(-45deg,
+    rgba(#fff, 0) 8%,
+    rgba(#fff, $b) 10%,
+    rgba(#fff, $b) 14%,
+    rgba(#fff, $b*2) 14%,
+    rgba(#fff, $b*2) 15%,
+    rgba(#fff, $b) 17%,
+    rgba(#fff, 0) 30%,
+    rgba(#fff, 0) 36%,
+    rgba(#fff, $b) 40%,
+    rgba(#fff, $b*2)42%,
+    rgba(#fff, 0) 43%,
+    rgba(#fff, 0) 55%,
+    rgba(#fff, $b) 60%,
+    rgba(#fff, $b) 66%,
+    rgba(#fff, $b*2) 66%,
+    rgba(#fff, $b) 70%,
+    rgba(#fff, 0) 75%,
+    rgba(#fff, 0) 100%);
+
+@mixin colorize-d($base) {
+    color: rgba(#fff, 0.7);
+    background-color: rgba($base, 0);
+
+    &:hover {
+        border-color: darken($base, 15%);
+        background-color: $base;
+    }
+    
+    $alpha: color.alpha($base);
+    
+    &:active,
+    &.active {
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 0 1em 0.5 color.scale($base,$alpha: -50%);
+    }
+
+    &.active {
+         border: 1px solid rgb(141, 141, 141);
+        background-color: $base;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 0 1em 0.5 color.scale($base, $alpha: -50%);
+    }
+}
+
+.btn-glass {
+    color: rgba(#fff, 0.7);
+    text-decoration: none;
+    font-family: Play;
+    font-size: 0.8em;
+    border: 1px solid rgb(117, 117, 117);
+    border-collapse:  collapse;
+    margin-right: 5px;
+    letter-spacing: 0.98pt;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px black;
+
+    transition: background-position 2s cubic-bezier(0, 1, 0, 1),
+        border-color 500ms,
+        background-color 500ms;
+
+    &:hover {
+        background-position: -100vw 0, 0 0;
+    }
+
+    &:active {
+        
+        background-position: -75vw 0, 0 0;
+        border-style: solid;
+    }
+
+    position: relative;
+
+    background-attachment: fixed,
+    scroll;
+    background-size: 100vw 100vh,
+    cover;
+    background-position: center center,
+    0 0;
+    background-image: $gloss,
+    radial-gradient(ellipse farthest-corner, transparent, rgba(#000, 0.2) 110%);
+}
+
+.nav-dark {
+    background-color: $clr-default;
+
+    //  .btn-glass { @include colorize-d(darken($clr-default, 20%)); }
+    //  .btn-glass.btn-primary { @include colorize-d($clr-primary); }
+    //  .btn-glass.btn-success { @include colorize-d($clr-success); }
+    //  .btn-glass.btn-warning { @include colorize-d($clr-warning); }
+    .btn-glass.btn-danger-ex {
+        @include colorize-d($clr-danger);
+    }
+
+    //  .btn-glass.btn-info { @include colorize-d($clr-info); }
+}
+
+
+nav.btn-bar {
+    background-color: $clr-default;
+}
+
+#nav-site{
+    background-color: $clr-default;
+}
+.btn-icon-nav{
+    color:rgb(218, 218, 218);
+    font-size: 0.9em;
+    
+    &:hover{
+        color:rgb(207, 4, 4);
+    }
+}
+/***************************************************************************/
+/*ESTILO BARRA TIPO DE PIEDRAS */
+/***************************************************************************/
+.container-type-stone:hover {
+    .icon-type-stone {
+        fill: white;
+    }
+}
+
+.icon-type-stone {
+    display: inline-block;
+    width: 33px;
+    height: 32px;
+    stroke-width: 0;
+    padding: 0;
+}
+
+.stone-active{
+    background-color:#ff4b4b;
+    border-radius: 10%;
+    border-top: 4px solid black;
+}
+
+.icon-murete {
+    width: 65px;
+}
+
+#form-contacto{
+    background-image: url('../../images/cantera2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 34%;
+    background-attachment:inherit;
+}
+
+/***************************************************************************/
+/***************************************************************************/
+/***************************************************************************/
+/* FOOTER */
+/***************************************************************************/
+/***************************************************************************/
+/***************************************************************************/
+
+footer{
+    background-color: black;
+    
+}

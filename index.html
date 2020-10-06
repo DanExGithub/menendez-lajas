@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menendez Lajas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="images/iconMenendez.ico">
+    <link rel="stylesheet" href="lib/fontawesome/css/all.css">
+
+    <link rel="stylesheet" href="lib/lightgallery/dist/css/lightgallery.css">
+    <link rel="stylesheet" href="lib/lightgallery/dist/css/lg-transitions.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/style.css">
+
+</head>
+<!--ICONOS TIPOS DE PIEDRA-->
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <symbol id="icon-irregular" viewBox="0 0 33 32">
+            <path
+                d="M22.783 24.686c-2.396 0-5.576-1.084-6.44-1.651-0.71-0.466-2.166-0.228-3.562 0.084-1.119 0.25-2.311 0.486-3.166 0.308-1.233-0.257-1.495-0.713-1.71-1.282-0.124-0.326-0.252-0.664-1.003-1.132-1.992-1.242-2.239-4.047-1.601-6.276 0.663-2.313 2.138-3.608 3.598-3.161 1.044-0.093 1.992-0.070 2.682-0.031 0.957 0.052 1.544 0.113 3.252-0.584 0.135-0.055 0.29-0.083 0.463-0.083 1.269 0 4.083 1.663 4.638 2.343 0.559 0.686 1.315 0.823 2.354 0.823 0.21 0 0.42-0.006 0.631-0.011 1.513-0.038 3.086-0.055 4.050 1.618 1.804 3.13 0.436 5.244-0.772 7.108-0.159 0.245-0.318 0.49-0.47 0.738-0.482 0.79-1.473 1.19-2.944 1.19zM15.156 21.645c0.727 0 1.313 0.153 1.793 0.468 0.665 0.436 3.635 1.47 5.834 1.47 0.729 0 1.67-0.115 2.005-0.661 0.157-0.256 0.321-0.509 0.483-0.76 1.186-1.831 2.21-3.412 0.743-5.958-0.519-0.899-1.288-1.076-2.44-1.076-0.207 0-0.416 0.006-0.626 0.011-1.372 0.033-2.817 0.068-3.866-1.218-0.378-0.463-2.893-1.938-3.784-1.938-1.945 0.768-2.653 0.727-3.777 0.664-0.672-0.038-1.599-0.060-2.635 0.039l-0.127 0.012-0.119-0.045c-0.868-0.322-1.803 0.732-2.278 2.388-0.506 1.771-0.372 4.104 1.124 5.036 1.067 0.666 1.298 1.274 1.45 1.678 0.12 0.32 0.166 0.438 0.904 0.594 0.638 0.132 1.656-0.072 2.7-0.306 0.876-0.196 1.78-0.398 2.615-0.398z">
+            </path>
+        </symbol>
+        <symbol id="icon-10L" viewBox="0 0 33 32">
+            <path d="M19.862 26.483h-6.621v-6.621h6.621v6.621zM14.345 25.379h4.414v-4.414h-4.414v4.414z"></path>
+        </symbol>
+        <symbol id="icon-15L" viewBox="0 0 33 32">
+            <path d="M20.966 26.483h-9.931v-8.828h9.931v8.828zM12.138 25.379h7.724v-6.621h-7.724v6.621z"></path>
+        </symbol>
+        <symbol id="icon-20L" viewBox="0 0 33 32">
+            <path d="M22.069 26.483h-12.138v-11.034h12.138v11.034zM11.034 25.379h9.931v-8.828h-9.931v8.828z"></path>
+        </symbol>
+        <symbol id="icon-25L" viewBox="0 0 33 32">
+            <path d="M23.172 26.483h-14.345v-13.241h14.345v13.241zM9.931 25.379h12.138v-11.034h-12.138v11.034z"></path>
+        </symbol>
+        <symbol id="icon-30L" viewBox="0 0 33 32">
+            <path d="M24.276 26.483h-15.448v-15.448h15.448v15.448zM9.931 25.379h13.241v-13.241h-13.241v13.241z"></path>
+        </symbol>
+        <symbol id="icon-40L" viewBox="0 0 33 32">
+            <path d="M27.586 26.483h-20.966v-20.966h20.966v20.966zM7.724 25.379h18.759v-18.759h-18.759v18.759z"></path>
+        </symbol>
+        <symbol id="icon-20x40L" viewBox="0 0 33 32">
+            <path d="M28.69 26.483h-24.276v-12.138h24.276v12.138zM5.517 25.379h22.069v-9.931h-22.069v9.931z"></path>
+        </symbol>
+        <symbol id="icon-murete" viewBox="0 0 65 32">
+            <path d="M45.241 19.862h-25.379v-4.414h25.379v4.414zM20.966 18.759h23.172v-2.207h-23.172v2.207z"></path>
+            <path d="M32 25.379h-25.379v-4.414h25.379v4.414zM7.724 24.276h23.172v-2.207h-23.172v2.207z"></path>
+            <path d="M58.483 25.379h-25.379v-4.414h25.379v4.414zM34.207 24.276h23.172v-2.207h-23.172v2.207z"></path>
+        </symbol>
+    </defs>
+</svg>
+
+<body data-spy="scroll" data-target="#nav-site" data-offset="40">
+    <header id="header" class="d-none d-sm-block">
+
+        <div class="container d-block pt-2 pb-1">
+            <div class="row">
+                <div class="col-12 text-center col-auto">
+                    <img class="logo" height="70px" src="images/logo.png"><span class="icon-30L"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="nav-site" class="navbar navbar-expand-md navbar-dark sticky-top">
+        <div class="container justify-content-around">
+            <img id="logo-nav" class="d-md-none show mr-auto order-sm-0" src="images/logo.svg" fill="white" alt="">
+            
+            <a class="d-sm-inline-block d-md-none  btn-icon-nav order-sm-2" title="Facebook" href="https://www.facebook.com/menendez.lajas"> <i class=" fab fa-facebook-square fa-2x mx-3 "></i></a>
+            <a class="d-sm-inline-block d-md-none btn-icon-nav order-sm-2"  title="Instagram" href="https://www.instagram.com/menendez.lajas"><i class=" fab fa-instagram fa-2x mx-3 "></i></a>
+            
+            <button class="navbar-toggler order-sm-3" type="button" data-toggle="collapse" data-target="#navegacion"
+                aria-controls="Navegacion" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           
+            <div class="collapse navbar-collapse order-sm-1" id="navegacion">
+                <ul class="navbar-nav nav-dark ml-auto mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link active btn-link btn-glass btn-danger-ex px-5" href="#nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link  dropdown-toggle btn-link btn-glass text-white btn-danger-ex px-5"
+                            href="#productos" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">Productos</a>
+                        <div class="dropdown-menu jutify-center" aria-labelledby="dropdown10">
+                            <a class="dropdown-item" href="#line-azulina">Verde Azulina</a>
+                            <a class="dropdown-item" href="#line-rosada">Verde Rosada</a>
+                            <a class="dropdown-item" href="#line-ojo-perdiz">Ojo de Perdiz</a>
+                            <a class="dropdown-item" href="#line-marron-san-juan">Marr&oacute;n</a>
+                            <a class="dropdown-item" href="#line-micosa">Micosa Blanca</a>
+                            <a class="dropdown-item" href="#line-micosa">Micosa Chocolate</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link  btn-link btn-glass btn-danger-ex px-5" href="#form-contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link  btn-link btn-glass btn-danger-ex px-5" href="#ubicacion">Ubicación</a>
+                    </li>
+                </ul>
+                
+            </div>
+            <a class="d-none d-md-inline-block btn-icon-nav order-sm-2" title="Facebook" href="https://www.facebook.com/menendez.lajas"> <i class=" fab fa-facebook-square fa-2x mx-3 "></i></a>
+            <a class="d-none d-md-inline-block btn-icon-nav order-sm-2" title="Instagram" href="https://www.instagram.com/menendez.lajas"><i class=" fab fa-instagram fa-2x mx-3 "></i></a>
+            
+        </div>
+    </nav>
+
+    <section id="main" class="container-fluid ">
+        <section id="nosotros" class="row main-carousel justify-content-center">
+            <div class="col-12 col-xl-6 m-2  align-self-center nos-description skewElem  ">
+                <span class="p-xs-0 p-3 text-white ">
+                    <p><strong>S</strong>omos una empresa familiar, que desde el año 1954, se dedica a la extracción de
+                        piedra laja, habiendo comenzado con el trabajo de don Froilán Menendez, quien
+                        extrajo por primera vez en la provincia de San Luis la piedra laja azulina.
+                    <p>Así, con más de 60 años en el rubro, somos la tercera generación de una familia
+                        comprometida a mejorar constantemente la calidad de su trabajo.
+                    </p>
+                    <p>Ubicada a 53 km de San Luis Capital, en el paraje Pampa del Tamboreo,
+                        departamento Coronel Pringles.
+                        Vendemos a todo el país, a constructoras, corralones y particulares.</p>
+                </span>
+            </div>
+
+        </section>
+        <section id="Productos" class="">
+            <div class="container">
+                <div class="row">
+                    <div class="p-0 col-md-12 col-lg-12 mt-2  skewElem ">
+                        <h4 class="pl-2 text-uppercase py-1 text-center bg-dark text-white">Productos</h4>
+                        <span class="pl-2">Nos dedicamos a la venta de piedra laja en San luis. Proveemos 6 variedades
+                            de piedra: </span>
+                            <ul >
+                                <li> Verde-Azulina</li>
+                                <li> Verde-Rosada</li>
+                                <li> Ojo de Perdiz</li>
+                                <li> Marrón San Juan</li>
+                                <li> Micosa Blanca</li>
+                                <li> Micosa Chocolate</li>
+                            </ul>
+                    </div>
+
+                </div>
+                <hr id="line-azulina" class="featurette-divider">
+                <div id="wrap-azulina" class="row order-xs-1 skewElem">
+                    <div class="p-0 col-md-12 ">
+                        <h5 class=" p-2 mb-3 bg-dark text-white text-uppercase">Piedra laja verde azulina</h5>
+                        <p class="pl-2">Piedra extraída de la localidad “Pampa del tamboreo”, a 53 km de San Luis,
+                            Capital.</p>
+                        <p class="pl-2">Indicado para trabajos de revestimientos de paredes y pisos.</p>
+
+                    </div>
+                </div>
+                <div class="row order-xs-0 pt-2 my-2 wrap-stone-row skewElem">
+                    <div class="col-md-6 mt-1 border-secondary sizes-gallery ">
+                        <img class="w-100" data-src="./images/piedra/verde-azulina/sizes-azulina.jpg"
+                            src="./images/piedra/verde-azulina/sizes-azulina.jpg" alt="">
+                    </div>
+                    <div class="col-md-6 mt-1  container-carousel">
+                        <div id="carousel_verde" class="carousel carousel-stone slide mb-1" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel_verde" data-slide-to="0" class=""></li>
+                                <li data-target="#carousel_verde" data-slide-to="1" class=""></li>
+                                <li data-target="#carousel_verde" data-slide-to="2" class="active"></li>
+                            </ol>
+                            <div class="stone-gallery carousel-inner">
+                                <div data-stone="irregular"
+                                    data-responsive="./images/piedra/verde-azulina/irregular_2_375.jpg 375, ./images/piedra/verde-azulina/irregular_2_480.jpg 480, ./images/piedra/verde-azulina/irregular_2_757.jpg 757"
+                                    data-src="./images/piedra/verde-azulina/irregular_2.jpg"
+                                    class="carousel-item active" data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/irregular_2.jpg">
+                                    <div class="carousel-caption caption d-block">
+                                        <h5>Formato Irregular</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div data-stone="irregular"
+                                    data-responsive="./images/piedra/verde-azulina/irregular_1_375.jpg 375, ./images/piedra/verde-azulina/irregular_1_480.jpg 480, ./images/piedra/verde-azulina/irregular_1_757.jpg 757"
+                                    data-src="./images/piedra/verde-azulina/irregular_1.jpg" class="carousel-item "
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/irregular_1.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Irregular</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div data-stone="irregular" data-src="./images/piedra/verde-azulina/irregular_3.jpg"
+                                    data-responsive="./images/piedra/verde-azulina/irregular_3_375.jpg 375, ./images/piedra/verde-azulina/irregular_3_480.jpg 480, ./images/piedra/verde-azulina/irregular_3_757.jpg 757"
+                                    data-src="./images/piedra/verde-azulina/irregular_3.jpg" class="carousel-item"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/irregular_3.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Irregular</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div data-stone="irregular" data-src="./images/piedra/verde-azulina/irregular_4.jpg"
+                                    class="carousel-item" data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/irregular_4.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Irregular</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item" data-stone="10L"
+                                    data-responsive="./images/piedra/verde-azulina/10LV_1_375.jpg 375, ./images/piedra/verde-azulina/10LV_1_480.jpg 480, ./images/piedra/verde-azulina/10LV_1_757.jpg 757"
+                                    data-src="./images/piedra/verde-azulina/10LV_1.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/10LV_1.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato 10LV</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="10L"
+                                    data-responsive="./images/piedra/verde-azulina/10LV_2_375.jpg 375, ./images/piedra/verde-azulina/10LV_2_480.jpg 480, ./images/piedra/verde-azulina/10LV_2_757.jpg 757"
+                                    data-src="./images/piedra/verde-azulina/10LV_2.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/10LV_2.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato 10LV</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="15L"
+                                    data-src="./images/piedra/verde-azulina/15LV_1.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/15LV_1.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato 15LV</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="20x40L"
+                                    data-responsive="./images/piedra/verde-azulina/20x40LV_1_375.jpg 375, ./images/piedra/verde-azulina/20x40LV_1_480.jpg 480, ./images/piedra/verde-azulina/20x40LV_1_757.jpg 757"
+                                    data-src="./images/piedra/verde-azulina/20x40LV_1.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/20x40LV_1.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato 20cm x 40Cm</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="20x40L"
+                                    data-responsive="./images/piedra/verde-azulina/20x40LV_2_375.jpg 375, ./images/piedra/verde-azulina/20x40LV_2_480.jpg 480, ./images/piedra/verde-azulina/20x40LV_2_757.jpg 757"
+                                    data-src="./images/piedra/verde-azulina/20x40LV_2.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/20x40LV_2.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato 20cm x 40Cm</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="20x40L"
+                                    data-src="./images/piedra/verde-azulina/20x40LV_3.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/20x40LV_3.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato 20cm x 40Cm</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="murete"
+                                    data-responsive="./images/piedra/verde-azulina/murete_4_375.jpg 375, ./images/piedra/verde-azulina/murete_4_480.jpg 480, ./images/piedra/verde-azulina/murete_4_757.jpg 757"
+                                    data-src="./images/piedra/verde-azulina/murete_4.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/murete_4.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Murete</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="murete"
+                                    data-responsive="./images/piedra/verde-azulina/murete_1_375.jpg 375, ./images/piedra/verde-azulina/murete_1_480.jpg 480, ./images/piedra/verde-azulina/murete_1_757.jpg 757"
+                                    data-src="./images/piedra/verde-azulina/murete_1.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/murete_1.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Murete</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="murete"
+                                    data-responsive="./images/piedra/verde-azulina/murete_2_375.jpg 375, ./images/piedra/verde-azulina/murete_2_480.jpg 480, ./images/piedra/verde-azulina/murete_2_757.jpg 757"
+                                    data-src="./images/piedra/verde-azulina/murete_2.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/murete_2.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Murete</h5>
+                                        <p>Mezclado: 2 cortes y rústico.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="murete"
+                                    data-responsive="./images/piedra/verde-azulina/murete_3_375.jpg 375, ./images/piedra/verde-azulina/murete_3_480.jpg 480, ./images/piedra/verde-azulina/murete_3_757.jpg 757"
+                                    data-src="./images/piedra/verde-azulina/murete_3.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/murete_3.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Murete</h5>
+                                        <p>Mezclado: 2 cortes y rústico.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="murete"
+                                    data-src="./images/piedra/verde-azulina/murete_6.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/murete_6.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Murete</h5>
+                                        <p>Mezclado: 2 cortes y rústico.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="murete"
+                                    data-src="./images/piedra/verde-azulina/murete_7.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/murete_7.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Murete</h5>
+                                        <p>Mezclado: 2 cortes y rústico.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="murete"
+                                    data-src="./images/piedra/verde-azulina/murete_8.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/murete_8.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Murete</h5>
+                                        <p>A 2 cortes, de 5cm</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="murete"
+                                    data-src="./images/piedra/verde-azulina/murete_10.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/murete_10.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Murete</h5>
+                                        <p>Mezclado: 2 cortes y rústico.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="murete"
+                                    data-src="./images/piedra/verde-azulina/murete_9.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-azulina/murete_9.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Murete</h5>
+                                        <p>Corte Rústico</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <a class="carousel-control-prev" href="#carousel_verde" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carousel_verde" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <div class="wrap-buttons-stone container p-0 mb-4 ">
+                            <div class="row p-0 m-0">
+                                <div class="col p-0 m-0 text-center" data-toggle="tooltip" data-placement="top"
+                                    title="Formato Irregular">
+                                    <svg class="icon-type-stone stone-active" data-stone="icon-irregular">
+                                        <use xlink:href="#icon-irregular"></use>
+                                    </svg>
+                                </div>
+                                <div class="p-0 m-0 text-center " data-toggle="tooltip" data-placement="top"
+                                    title="Formato 10LV">
+                                    <svg class="icon-type-stone " data-stone="icon-10L">
+                                        <use xlink:href="#icon-10L"></use>
+                                    </svg>
+                                </div>
+
+                                <div class="col p-0 m-0 text-center " data-toggle="tooltip" data-placement="top"
+                                    title="Formato 15LV">
+                                    <svg class="icon-type-stone " data-stone="icon-15L">
+                                        <use xlink:href="#icon-15L"></use>
+                                    </svg>
+                                </div>
+                                <!--                                    
+                                    <div class="col p-0 m-0 text-center " data-toggle="tooltip" data-placement="top" title="Formato 20LV">
+                                        <svg class="icon-type-stone" data-stone="icon-20L">
+                                            <use xlink:href="#icon-20L"></use>
+                                        </svg> </div>
+                                    <div class="col p-0 m-0 text-center " data-toggle="tooltip" data-placement="top" title="Formato 25LV">
+                                        <svg class="icon-type-stone" data-stone="icon-25L">
+                                            <use xlink:href="#icon-25L"></use>
+                                        </svg> </div>
+                                    <div class="col p-0 m-0 text-center " data-toggle="tooltip" data-placement="top" title="Formato 30LV">
+                                        <svg class="icon-type-stone" data-stone="icon-30L">
+                                            <use xlink:href="#icon-30L"></use>
+                                        </svg> </div>
+                                    <div class="col p-0 m-0 text-center" colspan="2" data-toggle="tooltip" data-placement="top" title="Formato 40L">
+                                        <svg class="icon-type-stone icon-40L" data-stone="icon-40L">
+                                            <use xlink:href="#icon-40L"></use>
+                                        </svg></div>
+-->
+                                <div class="col p-0 m-0 text-center" data-toggle="tooltip" data-placement="top"
+                                    title="Formato 20x40cm">
+                                    <svg class="icon-type-stone icon-20x40L" data-stone="icon-20x40L">
+                                        <use xlink:href="#icon-20x40L"></use>
+                                    </svg></div>
+                                <div class="col p-0 m-0 text-center" data-toggle="tooltip" data-placement="top"
+                                    title="Formato Murete">
+                                    <svg class="icon-type-stone icon-murete" data-stone="icon-murete">
+                                        <use xlink:href="#icon-murete"></use>
+                                    </svg></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <hr id="line-rosada" class="featurette-divider">
+                <div id="wrap-rosada" class="row skewElem">
+                    <div class="p-0 col-md-12 mt-2">
+                        <h5 class="p-2 mb-3 bg-dark text-white text-uppercase">Piedra Laja verde Rosada<span
+                                class="text-muted"></span></h5>
+                        <span>
+                        <p class="pl-2">Piedra extraída del paraje “Balde de la Isla”, ubicado a 70 km de la ciudad de
+                            San luis.</p>
+                        <p class="pl-2">Se aplica en revestimiento de paredes y pisos.</p>
+                    </span>
+                    </div>
+                </div>
+                <div class="row pt-2 my-2 wrap-stone-row skewElem">
+                    <div class="col-md-6 mt-1 container-carousel order-xs-1">
+                        <div id="carousel_rosado" class="carousel carousel-stone slide mb-1" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel_rosado" data-slide-to="0" class=""></li>
+                                <li data-target="#carousel_rosado" data-slide-to="1" class=""></li>
+                                <li data-target="#carousel_rosado" data-slide-to="2" class="active"></li>
+                            </ol>
+                            <div class="stone-gallery carousel-inner">
+                                <div data-stone="irregular" data-src="./images/piedra/verde-rosada/irregular_1.jpg"
+                                    class="carousel-item active" data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-rosada/irregular_1.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Irregular</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div data-stone="irregular" data-src="./images/piedra/verde-rosada/irregular_2.jpg"
+                                    class="carousel-item" data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-rosada/irregular_2.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Irregular</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div data-stone="irregular" data-src="./images/piedra/verde-rosada/irregular_3.jpg"
+                                    class="carousel-item" data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-rosada/irregular_3.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Irregular</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item" data-stone="10L"
+                                    data-src="./images/piedra/verde-rosada/10LV_1.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-rosada/10LV_1.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato 10LV</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="10L"
+                                    data-src="./images/piedra/verde-rosada/10LV_2.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-rosada/10LV_2.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato 10LV</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="30L"
+                                    data-src="./images/piedra/verde-rosada/30LV_1.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-rosada/30LV_1.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato 30LV</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item" data-stone="40L"
+                                    data-src="./images/piedra/verde-rosada/40x40LV_1.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-rosada/40x40LV_1.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato 40cmX40cm</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="murete"
+                                    data-src="./images/piedra/verde-rosada/murete_2.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-rosada/murete_2.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Murete</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="murete"
+                                    data-src="./images/piedra/verde-rosada/murete_1.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-rosada/murete_1.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Murete</h5>
+                                        <p>Mezclado: 2 cortes y rústico.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="murete"
+                                    data-src="./images/piedra/verde-rosada/murete_3.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-rosada/murete_3.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Murete</h5>
+                                        <p>A 2 cortes, de 7cm</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-stone="murete"
+                                    data-src="./images/piedra/verde-rosada/murete_4.jpg"
+                                    data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/verde-rosada/murete_4.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Murete</h5>
+                                        <p>A 2 cortes, de 8cm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carousel_rosado" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carousel_rosado" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <div class="wrap-buttons-stone container p-0 mb-4 ">
+                            <div class="row p-0 m-0" align-items="center">
+                                <div class="col p-0 m-0 text-center" data-toggle="tooltip" data-placement="top"
+                                    title="Formato Irregular">
+                                    <svg class="icon-type-stone stone-active" data-stone="icon-irregular">
+                                        <use xlink:href="#icon-irregular"></use>
+                                    </svg>
+                                </div>
+                                <div class="p-0 m-0 text-center " data-toggle="tooltip" data-placement="top"
+                                    title="Formato 10LV">
+                                    <svg class="icon-type-stone " data-stone="icon-10L">
+                                        <use xlink:href="#icon-10L"></use>
+                                    </svg>
+                                </div>
+
+                                <!--
+                                     <div class="col p-0 m-0 text-center " data-toggle="tooltip" data-placement="top" title="Formato 15LV">
+                                        <svg class="icon-type-stone " data-stone="icon-15L">
+                                            <use xlink:href="#icon-15L"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="col p-0 m-0 text-center " data-toggle="tooltip" data-placement="top" title="Formato 20LV">
+                                        <svg class="icon-type-stone" data-stone="icon-20L">
+                                            <use xlink:href="#icon-20L"></use>
+                                        </svg> </div>
+                                    <div class="col p-0 m-0 text-center " data-toggle="tooltip" data-placement="top" title="Formato 25LV">
+                                        <svg class="icon-type-stone" data-stone="icon-25L">
+                                            <use xlink:href="#icon-25L"></use>
+                                        </svg> </div>
+-->
+                                <div class="col p-0 m-0 text-center " data-toggle="tooltip" data-placement="top"
+                                    title="Formato 30LV">
+                                    <svg class="icon-type-stone" data-stone="icon-30L">
+                                        <use xlink:href="#icon-30L"></use>
+                                    </svg> </div>
+                                <div class="col p-0 m-0 text-center" colspan="2" data-toggle="tooltip"
+                                    data-placement="top" title="Formato 40L">
+                                    <svg class="icon-type-stone icon-40L" data-stone="icon-40L">
+                                        <use xlink:href="#icon-40L"></use>
+                                    </svg></div>
+
+                                <!--      <div class="col p-0 m-0 text-center" data-toggle="tooltip" data-placement="top" title="Formato 20x40cm">
+                                        <svg class="icon-type-stone icon-20x40L" data-stone="icon-20x40L">
+                                            <use xlink:href="#icon-20x40L"></use>
+                                        </svg></div> -->
+                                <div class="col p-0 m-0 text-center" data-toggle="tooltip" data-placement="top"
+                                    title="Formato Murete">
+                                    <svg class="icon-type-stone icon-murete" data-stone="icon-murete">
+                                        <use xlink:href="#icon-murete"></use>
+                                    </svg></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-1 order-xs-1 sizes-gallery ">
+                        <img class="w-100 mt-2" data-src="./images/piedra/verde-rosada/sizes_rosada.jpg"
+                            src="./images/piedra/verde-rosada/sizes_rosada.jpg" alt="">
+                    </div>
+
+                </div>
+                <hr id="line-ojo-perdiz" class="featurette-divider">
+                <div id="wrap-ojo-perdiz" class="row skewElem">
+                    <div class="p-0 col-md-12">
+                        <h5 class="p-2  mb-3 bg-dark text-white text-uppercase">Piedra Ojo de Perdíz<span
+                                class="text-muted"></span></h5>
+                        <p class="pl-2">Piedra extraída en Riocito, a 45 km de San Luis, Capital.</p>
+                        <p class="pl-2">Esta piedra se caracteriza por tener pequeños puntos negros, lo cual le da su
+                            nombre.</p>
+                        <p class="pl-2">Su utilización es para revestimientos de paredes y pisos.</p>
+                    </div>
+                </div>
+                <div class="row pt-2 my-2 wrap-stone-row skewElem">
+                    <div class="col-md-6 mt-1 align-self-center sizes-gallery">
+                        <img class="w-100" data-src="./images/piedra/ojo-perdiz/sizes_ojoperdiz.jpg"
+                            src="./images/piedra/ojo-perdiz/sizes_ojoperdiz.jpg" alt="" />
+                    </div>
+                    <div class="col-md-6 mt-1 container-carousel">
+                        <div id="carousel_ojo_perdiz" class="carousel carousel-stone slide mb-1" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel_ojo_perdiz" data-slide-to="0" class=""></li>
+                                <li data-target="#carousel_ojo_perdiz" data-slide-to="1" class=""></li>
+                                <li data-target="#carousel_ojo_perdiz" data-slide-to="2" class="active"></li>
+                            </ol>
+                            <div class="stone-gallery carousel-inner">
+                                <div data-stone="irregular" data-src="./images/piedra/ojo-perdiz/irregular_1.jpg"
+                                    class="carousel-item active" data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/ojo-perdiz/irregular_1.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Irregular</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div data-stone="irregular" data-src="./images/piedra/ojo-perdiz/irregular_2.jpg"
+                                    class="carousel-item" data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/ojo-perdiz/irregular_2.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Irregular</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div data-stone="irregular" data-src="./images/piedra/ojo-perdiz/irregular_3.jpg"
+                                    class="carousel-item" data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/ojo-perdiz/irregular_3.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Irregular</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div data-stone="irregular" data-src="./images/piedra/ojo-perdiz/irregular_4.jpg"
+                                    class="carousel-item" data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/ojo-perdiz/irregular_4.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Irregular</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div data-stone="15L" data-src="./images/piedra/ojo-perdiz/15LV_1.jpg"
+                                    class="carousel-item" data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/ojo-perdiz/15LV_1.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato 15LV</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carousel_ojo_perdiz" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carousel_ojo_perdiz" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <div class="wrap-buttons-stone container p-0 mb-4 ">
+                            <div class="row p-0 m-0 justify-content-center">
+                                <div class="col-1 p-0 m-0 text-center" data-toggle="tooltip" data-placement="top"
+                                    title="Formato Irregular">
+                                    <svg class="icon-type-stone stone-active" data-stone="icon-irregular">
+                                        <use xlink:href="#icon-irregular"></use>
+                                    </svg>
+                                </div>
+                                <!--
+                                <div class="p-0 m-0 text-center " data-toggle="tooltip" data-placement="top" title="Formato 10LV">
+                                    <svg class="icon-type-stone " data-stone="icon-10L">
+                                        <use xlink:href="#icon-10L"></use>
+                                    </svg>
+                                </div>
+-->
+
+                                <div class="col-1 p-0 m-0 text-center " data-toggle="tooltip" data-placement="top"
+                                    title="Formato 15LV">
+                                    <svg class="icon-type-stone " data-stone="icon-15L">
+                                        <use xlink:href="#icon-15L"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <hr id="line-marron-san-juan" class="featurette-divider">
+                <div id="wrap-marron-san-juan" class="row skewElem">
+                    <div class="p-0 col-md-12">
+                        <h5 class="p-2 mb-3 bg-dark text-white text-uppercase">Piedra Laja Marrón (Estilo San Juan)</h5>
+                        <p class="pl-2">Extraído de la zona “Paso del Rey“, a 60 km de San Luis, Capital.</p>
+                        <p class="pl-2">Con sus diferentes tonalidades: marrón, óxido, y gris.</p>
+                        <p class="pl-2">Su uso es para revestimientos de paredes y pisos.</p>
+                    </div>
+                </div>
+                <div class="row pt-2 my-2 wrap-stone-row skewElem">
+                    <div class="col-md-6 mt-1 order-xs-1 container-carousel">
+                        <div id="carousel_marron" class="carousel carousel-stone slide mb-1" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel_marron" data-slide-to="0" class=""></li>
+                                <li data-target="#carousel_marron" data-slide-to="1" class=""></li>
+                                <li data-target="#carousel_marron" data-slide-to="2" class="active"></li>
+                            </ol>
+                            <div class="stone-gallery carousel-inner">
+                                <div data-stone="murete" data-src="./images/piedra/marron/murete_2.jpg"
+                                    class="carousel-item active" data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/marron/murete_2.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Murete</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div data-stone="murete" data-src="./images/piedra/marron/murete_1.jpg"
+                                    class="carousel-item " data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/marron/murete_1.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Murete</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div data-stone="murete" data-src="./images/piedra/marron/murete_3.jpg"
+                                    class="carousel-item " data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/marron/murete_3.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Murete</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <a class="carousel-control-prev" href="#carousel_marron" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carousel_marron" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <div class="wrap-buttons-stone container p-0 mb-4 ">
+                            <div class="row p-0 m-0">
+                                <div class="col p-0 m-0 text-center " data-toggle="tooltip" data-placement="top"
+                                    title="Formato Murete">
+                                    <svg class="icon-type-stone icon-murete stone-active" data-stone="icon-murete">
+                                        <use xlink:href="#icon-murete"></use>
+                                    </svg></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 mt-1 order-xs-0 align-self-center sizes-gallery">
+                        <img class="w-100" data-src="./images/piedra/marron/sizes_marron.jpg"
+                            src="./images/piedra/marron/sizes_marron.jpg" alt="">
+                    </div>
+
+                </div>
+
+                <hr id="line-micosa" class="featurette-divider">
+                <div id="wrap-micosa" class="row skewElem">
+                    <div class="p-0 col-md-12">
+                        <h5 class="p-2 mb-3 bg-dark text-white text-uppercase">Piedra Laja Micosa <span
+                                class="text-muted"></span></h5>
+                        <p class="pl-2">Proveniente de la localidad de “El Volcán“, a 18 km de San Luis, Capital.</p>
+                        <p class="pl-2">Perfecto para revestimientos de paredes y pisos.</p>
+                        <p class="pl-2">Existen 2 variedades: Micosa Chocolate y Micosa Blanca.</p>
+                    </div>
+                </div>
+                <div class="row pt-2 my-2 wrap-stone-row skewElem">
+                    <div class="col-md-6 mt-1 align-self-center sizes-gallery">
+                        <img class="w-100" data-src="./images/piedra/micosa/sizes_micosa.jpg"
+                            src="./images/piedra/micosa/sizes_micosa.jpg" alt="">
+                    </div>
+                    <div class="col-md-6 mt-1 container-carousel">
+                        <div id="carousel_micosa" class="carousel carousel-stone slide mb-1" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel_micosa" data-slide-to="0" class=""></li>
+                                <li data-target="#carousel_micosa" data-slide-to="1" class=""></li>
+                                <li data-target="#carousel_micosa" data-slide-to="2" class="active"></li>
+                            </ol>
+                            <div class="stone-gallery carousel-inner">
+                                <div data-stone="irregular" data-src="./images/piedra/micosa/irregular_blan_1.jpeg"
+                                    class="carousel-item active" data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/micosa/irregular_blan_1.jpeg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Irregular Micosa Blanca</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+
+
+
+                                <div data-stone="irregular" data-src="./images/piedra/micosa/irregular_blan_2.png"
+                                    class="carousel-item " data-sub-html=".carousel-caption">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Irregular Micosa Blanca</h5>
+                                        <p></p>
+                                    </div><img src="./images/piedra/micosa/irregular_blan_2.png">
+
+                                </div>
+
+                                <div data-stone="irregular" data-src="./images/piedra/micosa/irregular_choc_1.jpg"
+                                    class="carousel-item " data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/micosa/irregular_choc_1.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Irregular Micosa Chocolate</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+
+
+
+                                <div data-stone="irregular" data-src="./images/piedra/micosa/irregular_choc_2.jpg"
+                                    class="carousel-item " data-sub-html=".carousel-caption">
+                                    <img src="./images/piedra/micosa/irregular_choc_2.jpg">
+                                    <div class="carousel-caption d-block">
+                                        <h5>Formato Irregular Micosa Chocolate</h5>
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <a class="carousel-control-prev" href="#carousel_micosa" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carousel_micosa" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <div class="wrap-buttons-stone container p-0 mb-4 ">
+                            <div class="row p-0 m-0">
+
+
+                                <div class="col p-0 m-0 text-center" data-toggle="tooltip" data-placement="top"
+                                    title="Formato Irregular">
+                                    <svg class="icon-type-stone stone-active" data-stone="icon-irregular">
+                                        <use xlink:href="#icon-irregular"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+        <section id="contacto" class=" mt-3 skewElem">
+            <div class="container">
+                <div id="form-contacto" class="row justify-content-center text-white">
+                    <div class="col-md-10 p-3">
+                        <h1 class="text-center text-dark ">Contacto</h1>
+                        <form class="needs-validation" novalidate="">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName">Nombre</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="" value=""
+                                        required="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName">Apellido</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="" value=""
+                                        required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                                <input type="email" class="form-control" id="email" placeholder="tu@mail.com">
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address for shipping updates.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="address2">Mensaje</label>
+                                <textarea rows="10" cols="10" class="form-control" placeholder=""></textarea>
+                            </div>
+                            <hr class="mb-4">
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row "></div>
+                <div id="ubicacion" class="col-12 mt-2">
+                    <hr class="featurette-divider">
+                    <h1 class=" text-center pt-2">Ubicación</h1>
+                    <iframe class="w-100 mt-2"
+                        src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d3090.38808286635!2d-65.97359052388093!3d-33.07207480877897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e0!4m3!3m2!1d-33.0736329!2d-65.9833963!4m3!3m2!1d-33.07199!2d-65.9732794!5e1!3m2!1ses!2sar!4v1597949717261!5m2!1ses!2sar"
+                        width="600" height="600" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
+
+                </div>
+            </div>
+
+            </div>
+        </section>
+        <hr class="featurette-divider">
+
+    </section>
+
+    <footer class="container-fluid p-3">
+        <div class="row p-0 m-0">
+                <div class="col text-center pb-0 m-0">
+                    <span class="text-white pb-0">Menendez Lajas © 2020</span>
+                </div>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="lib/fontawesome/js/all.js"></script>
+    <script type="text/javascript" src="lib/js/jquery.3.5.1.js"></script>
+    <script type="text/javascript" src="lib/js/popper1_16_1.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!--    <script src="lib/anime-master/lib/anime.min.js"></script>-->
+    <script src="lib/gsap-public/gsap-public/minified/gsap.min.js"></script>
+    <script src="lib/gsap-public/gsap-public/minified/ScrollTrigger.min.js"></script>
+    <script src="lib/lightgallery/dist/js/lightgallery.min.js"></script>
+    <script src="lib/lightgallery/dist/js/lg-fullscreen.min.js"></script>
+    <script type="text/javascript" src="lib/js/main.js"></script>
+</body>
+
+</html>

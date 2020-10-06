@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        html,
+        body {
+            background-color: rgb(255, 255, 255);
+        }
+
+        #logo-intro {
+            position: relative;
+            width: 100%;
+            height: 20%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo {
+            margin: auto;
+        }
+
+        .vert {
+            transform-origin: center bottom;
+        }
+
+        .hori {
+            transform-origin: 0% 50%;
+        }
+
+        .diag-left {
+            transform-origin: 100% 100%;
+        }
+
+        .diag-right {
+            transform-origin: 100% 0%;
+        }
+
+        .stripes path,
+        .text-fills path,
+        .katakana path,
+        .line {
+            opacity: 0
+        }
+        .katakana-black, .katakana-red, .text-fills, .text-lines{
+            cursor:pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="logo-intro">
+        <svg class="logo"  width="100%" height="300" viewBox="0 0 1024 400">
+            <g class="katakana-black" transform="translate(100.000000, 160.000000)" fill="#FFF">
+                <path data-d="M345.664,50.674 345.664,0 444.6,96.684 345.664,96.684 345.664,50.674"
+                    d="M377.5,32.095 345.664,0 444.599,96.684 423.5,77.095 399.5,53.095 " />
+            </g>
+            <g class="katakana-red" transform="translate(100.000000, 160.000000)" fill="#FFF">
+                <path data-d="M463.468,53.12 463.468,106.689 365.585,10.555 463.468,10.555 463.468,53.12"
+                    d="M436.609,79.291 463.468,106.688 365.585,10.555 391.044,35.577 414.601,57.767 " />
+            </g>
+            <g class="text-fills" transform="translate(103.000000, 170.000000)" fill="#FFF">
+                <path
+                    d="M126.027,140.463c13.994,0,19.152,8.748,19.152,20.033c0,4.76-1.722,9.739-2.577,11.513H105.89  c-1.352,11.508,5.77,16.385,14.859,16.385c4.295,0,8.96-2.105,12.272-4.322l4.915,7.642c-4.915,3.1-12.031,5.755-20.626,5.755  c-14.364,0-24.186-8.41-24.186-23.022C93.122,154.191,110.184,140.463,126.027,140.463z M133.637,164.487  c0.374-1.439,0.613-2.991,0.613-4.762c0-5.31-2.458-10.07-9.817-10.07c-7.247,0-14.492,5.533-17.438,14.832H133.637z" />
+                <path
+                    d="M163.716,141.791h10.678l-0.611,7.641h0.488c6.387-4.873,13.138-8.969,20.75-8.969c10.068,0,14.241,4.98,14.241,13.725  c0,2.551-0.247,4.762-0.982,7.642l-7.612,34.311h-13.136l7.369-32.764c0.492-2.546,0.978-4.099,0.978-5.755  c0-4.649-2.453-6.972-7.606-6.972c-4.176,0-8.837,2.54-15.225,8.407l-8.107,37.086H151.68L163.716,141.791z" />
+                <path
+                    d="M252.107,140.463c13.999,0,19.151,8.748,19.151,20.033c0,4.76-1.715,9.739-2.573,11.513h-36.714  c-1.349,11.508,5.769,16.385,14.858,16.385c4.295,0,8.958-2.105,12.276-4.322l4.907,7.642c-4.907,3.1-12.027,5.755-20.624,5.755  c-14.365,0-24.189-8.41-24.189-23.022C219.205,154.191,236.269,140.463,252.107,140.463z M259.719,164.487  c0.367-1.439,0.616-2.991,0.616-4.762c0-5.31-2.454-10.07-9.827-10.07c-7.241,0-14.485,5.533-17.431,14.832H259.719z" />
+                <path
+                    d="M289.795,141.791h10.682l-0.611,7.641h0.489c6.383-4.873,13.133-8.969,20.748-8.969c10.069,0,14.238,4.98,14.238,13.725  c0,2.551-0.246,4.762-0.976,7.642l-7.615,34.311h-13.135l7.367-32.764c0.488-2.546,0.98-4.099,0.98-5.755  c0-4.649-2.455-6.972-7.612-6.972c-4.173,0-8.837,2.54-15.227,8.407l-8.101,37.08h-13.263L289.795,141.791z" />
+                <path
+                    d="M393.293,137.258l4.174-19.26h13.135l-17.433,78.145h-10.804l0.613-7.526h-0.367c-5.647,5.317-13.014,8.854-19.89,8.854  c-10.559,0-17.185-7.084-17.185-19.815c0-20.806,15.713-37.189,32.405-37.189c5.898,0,10.684,2.883,13.263,7.192h0.368  L393.293,137.258z M383.964,178.546l4.909-21.694c-2.699-4.649-6.506-6.645-10.192-6.645c-10.187,0-19.517,11.845-19.517,25.79  c0,7.975,3.438,11.737,8.964,11.737C373.277,187.729,378.924,185.074,383.964,178.546z" />
+                <path
+                    d="M444.484,140.463c13.994,0,19.152,8.748,19.152,20.033c0,4.76-1.719,9.739-2.576,11.513h-36.705  c-1.354,11.508,5.766,16.385,14.854,16.385c4.295,0,8.961-2.105,12.277-4.322l4.91,7.642c-4.91,3.1-12.033,5.755-20.625,5.755  c-14.363,0-24.19-8.41-24.19-23.022C411.582,154.191,428.648,140.463,444.484,140.463z M452.101,164.487  c0.365-1.439,0.611-2.991,0.611-4.762c0-5.31-2.457-10.07-9.82-10.07c-7.244,0-14.488,5.533-17.436,14.832H452.101z" />
+                <path
+                    d="M467.691,189.395l35.852-38.193h-24.557l2.086-9.409h41.135l-1.477,6.868l-35.973,38.074h28.361l-2.09,9.408h-44.811  L467.691,189.395z" />
+                <path
+                    d="M649.087,144.234c5.896,0,11.176,2.987,13.879,7.637h0.246l2.58-6.309h10.557l-12.031,54.347h-10.807l0.613-7.526h-0.369  c-5.648,5.313-13.01,8.854-19.889,8.854c-10.559,0-17.188-7.078-17.188-19.811C616.677,160.62,632.392,144.234,649.087,144.234z   M655.105,182.313l4.908-21.693c-2.697-4.652-6.502-6.646-10.189-6.646c-10.186,0-19.516,11.845-19.516,25.793  c0,7.971,3.439,11.733,8.963,11.733C644.425,191.497,650.197,188.848,655.105,182.313z" />
+                <path
+                    d="M694.267,204.119c-2.578,10.737-8.223,18.593-20.256,18.593c-4.055,0-7.121-0.662-10.559-2.211l4.172-8.632  c1.6,0.881,3.197,1.328,5.406,1.328c4.42,0,6.504-3.104,8.102-9.302l13.01-58.328h13.141L694.267,204.119z M696.361,129.733  c0-4.206,3.926-7.749,8.834-7.749c3.928,0,7.611,2.215,7.611,6.197c0,4.429-4.051,7.751-8.84,7.751  C700.039,135.934,696.361,133.72,696.361,129.733z" />
+                <path
+                    d="M746.81,144.234c5.9,0,11.176,2.987,13.879,7.637h0.244l2.578-6.309h10.561l-12.031,54.347h-10.807l0.611-7.526h-0.369  c-5.645,5.313-13.006,8.854-19.885,8.854c-10.559,0-17.189-7.078-17.189-19.811C714.402,160.62,730.121,144.234,746.81,144.234z   M752.83,182.313l4.914-21.693c-2.697-4.652-6.51-6.646-10.193-6.646c-10.188,0-19.52,11.845-19.52,25.793  c0,7.971,3.438,11.733,8.963,11.733C742.144,191.497,747.919,188.848,752.83,182.313z" />
+                <path
+                    d="M784.011,185.08c3.932,4.646,8.846,7.301,14.246,7.301c5.645,0,10.559-3.102,10.559-7.088c0-3.425-3.199-5.31-10.811-9.077  c-7.979-3.977-12.885-8.517-12.885-15.045c0-9.852,9.939-16.937,21.977-16.937c7.854,0,14.234,3.313,18.9,7.746l-7.369,6.31  c-3.066-2.771-6.754-5.092-11.537-5.092c-5.525,0-9.58,3.102-9.58,6.864c0,3.982,5.158,5.866,10.311,8.522  c8.965,4.317,13.389,8.628,13.389,15.271c0,10.52-10.066,17.378-23.939,17.378c-7.609,0-16.572-4.202-21.119-10.4L784.011,185.08z" />
+                <path
+                    d="M72.758,168.549 57.303,197.373 70.641,197.373 112.707,116.688 98.878,116.688 56.083,157.739 48.209,116.688   38.194,116.688 0,196.325 12.512,196.317 40.396,136.733 47.447,172.924 56.853,172.924 87.203,141.615 72.758,168.549 " />
+                <path
+                    d="M574.636,153.604 595.771,111.798 582.39,111.798 537.964,197.373 600.093,197.373 605.904,186.503 558.076,186.36   574.636,153.604 " />
+            </g>
+            <g class="text-lines"  stroke="#FFF" transform="translate(103.000000, 170.000000)" stroke-width="2" fill="none"
+                fill-rule="evenodd">
+                <path fill="none" class="line hori" stroke-linecap="square" d="M164.941,196.143H151.68" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M173.048,159.057l-8.107,37.086" />
+                <path fill="none" class="line diag-left"
+                    d="M195.879,157.623c0-4.648-2.453-6.973-7.606-6.973   c-4.176,0-8.837,2.539-15.225,8.406" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M187.532,196.143l7.369-32.765c0.492-2.546,0.978-4.101,0.978-5.755" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M200.668,196.143h-13.136" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M209.262,154.188c0,2.553-0.247,4.764-0.982,7.644l-7.612,34.312" />
+                <path fill="none" class="line diag-right" d="M195.021,140.463c10.068,0,14.241,4.98,14.241,13.725" />
+                <path fill="none" class="line diag-left" d="M174.271,149.432c6.387-4.873,13.138-8.969,20.75-8.969" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M174.394,141.791l-0.611,7.641h0.488" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M163.716,141.791h10.678" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M151.68,196.143l12.036-54.352" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M277.759,196.137l12.036-54.346" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M291.022,196.137h-13.263" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M299.123,159.057l-8.101,37.08" />
+                <path fill="none" class="line diag-left"
+                    d="M321.962,157.623c0-4.648-2.455-6.973-7.612-6.973   c-4.173,0-8.837,2.539-15.227,8.406" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M313.615,196.143l7.367-32.765c0.488-2.546,0.98-4.101,0.98-5.755" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M326.75,196.143h-13.135" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M335.341,154.188c0,2.553-0.246,4.764-0.976,7.644l-7.615,34.312" />
+                <path fill="none" class="line diag-left"
+                    d="M300.355,149.432c6.383-4.873,13.133-8.969,20.748-8.969   c10.069,0,14.238,4.98,14.238,13.725" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M300.477,141.791l-0.611,7.641h0.489" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M289.795,141.791h10.682" />
+                <line fill="none" class="line hori" stroke-linecap="square" x1="382.365" y1="196.143" x2="382.978"
+                    y2="188.618" />
+                <line fill="none" class="line diag-left" x1="393.169" y1="196.143" x2="382.365" y2="196.143" />
+                <line fill="none" class="line hori" stroke-linecap="square" x1="410.602" y1="117.998" x2="393.169"
+                    y2="196.143" />
+                <line fill="none" class="line diag-left" x1="397.467" y1="117.998" x2="410.602" y2="117.998" />
+                <polyline fill="none" class="line hori" stroke-linecap="square"
+                    points="391.572,147.661 393.293,137.258 397.467,117.998  " />
+                <path fill="none" class="line diag-left" d="M377.941,140.469c5.898,0,10.684,2.883,13.263,7.192h0.368" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M345.536,177.658c0-20.807,15.713-37.189,32.405-37.189" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M382.978,188.618h-0.367c-5.647,5.315-13.014,8.854-19.89,8.854   c-10.559,0-17.185-7.084-17.185-19.814" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M388.873,156.852c-2.699-4.647-6.506-6.645-10.192-6.645   c-10.187,0-19.517,11.845-19.517,25.79c0,7.976,3.438,11.737,8.964,11.737c5.149-0.006,10.796-2.66,15.836-9.188" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M383.964,178.546l4.909-21.694" />
+                <path fill="none" class="line diag-left" d="M451.486,184.073l4.91,7.642" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M424.355,172.009c-1.354,11.509,5.766,16.386,14.854,16.386   c4.295,0,8.961-2.104,12.277-4.321" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M461.059,172.009h-36.703" />
+                <path fill="none" class="line diag-right"
+                    d="M444.484,140.463c13.992,0,19.15,8.748,19.15,20.033   c0,4.76-1.719,9.738-2.576,11.513" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M411.581,174.449c0.001-20.258,17.067-33.986,32.903-33.986" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M456.396,191.715c-4.91,3.102-12.033,5.756-20.625,5.756   c-14.363,0-24.19-8.41-24.19-23.021" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M425.456,164.486h26.645" />
+                <path fill="none" class="line diag-left" d="M442.892,149.654c-7.242,0-14.486,5.533-17.436,14.832" />
+                <path fill="none" class="line diag-right"
+                    d="M452.101,164.486c0.365-1.438,0.611-2.99,0.611-4.762   c0-5.311-2.457-10.07-9.82-10.07" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M503.543,151.203h-24.557" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M467.691,189.395l35.852-38.191" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M466.215,196.143l1.477-6.748" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M511.027,196.143h-44.813" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M513.117,186.734l-2.09,9.408" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M484.756,186.734h28.361" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M520.73,148.662l-35.975,38.072" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M522.207,141.794l-1.477,6.868" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M481.072,141.794h41.135" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M478.986,151.203l2.086-9.409" />
+                <path fill="none" class="line diag-right" d="M649.087,144.234c5.896,0,11.176,2.986,13.879,7.637" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M616.678,181.426c-0.001-20.806,15.714-37.191,32.409-37.191" />
+                <path fill="none" class="line diag-right"
+                    d="M653.755,192.383c-5.646,5.313-13.01,8.854-19.889,8.854   c-10.561,0-17.188-7.076-17.188-19.811" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M653.511,199.909l0.613-7.526h-0.369" />
+                <line fill="none" class="line hori" stroke-linecap="square" x1="664.319" y1="199.909" x2="653.511"
+                    y2="199.909" />
+                <line fill="none" class="line hori" stroke-linecap="square" x1="676.349" y1="145.563" x2="664.319"
+                    y2="199.909" />
+                <line fill="none" class="line hori" stroke-linecap="square" x1="665.792" y1="145.563" x2="676.349"
+                    y2="145.563" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M662.966,151.871h0.246l2.58-6.309" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M649.824,153.975c-10.188,0-19.518,11.844-19.518,25.793" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M660.012,160.621c-2.695-4.652-6.502-6.646-10.188-6.646" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M655.105,182.313l4.906-21.691" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M630.307,179.768c0,7.972,3.439,11.732,8.964,11.732   c5.154-0.003,10.927-2.652,15.835-9.188" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M681.132,203.895l13.01-58.328" />
+                <path fill="none" class="line diag-left"
+                    d="M667.624,211.869c1.6,0.881,3.197,1.328,5.406,1.328   c4.42,0,6.504-3.104,8.102-9.303" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M663.452,220.501l4.172-8.632" />
+                <path fill="none" class="line diag-left"
+                    d="M694.267,204.119c-2.576,10.736-8.223,18.593-20.256,18.593   c-4.055,0-7.121-0.662-10.559-2.211" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M707.284,145.566l-13.018,58.553" />
+                <line fill="none" class="line hori" stroke-linecap="square" x1="694.142" y1="145.566" x2="707.284"
+                    y2="145.566" />
+                <path fill="none" class="line diag-left"
+                    d="M696.361,129.732c0-4.205,3.926-7.748,8.834-7.748   c3.928,0,7.609,2.215,7.609,6.197c0,4.428-4.051,7.75-8.84,7.75C700.039,135.934,696.361,133.721,696.361,129.732z" />
+                <path fill="none" class="line diag-right" d="M746.81,144.234c5.9,0,11.178,2.986,13.881,7.637" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M714.403,181.426c-0.001-20.806,15.718-37.191,32.406-37.191" />
+                <path fill="none" class="line diag-left"
+                    d="M751.476,192.383c-5.645,5.313-13.006,8.854-19.885,8.854   c-10.559,0-17.188-7.076-17.188-19.811" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M751.235,199.909l0.609-7.526h-0.369" />
+                <line fill="none" class="line hori" stroke-linecap="square" x1="762.042" y1="199.909" x2="751.235"
+                    y2="199.909" />
+                <line fill="none" class="line hori" stroke-linecap="square" x1="774.073" y1="145.563" x2="762.042"
+                    y2="199.909" />
+                <line fill="none" class="line hori" stroke-linecap="square" x1="763.511" y1="145.563" x2="774.073"
+                    y2="145.563" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M760.69,151.871h0.242l2.578-6.309" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M752.83,182.313l4.914-21.691" />
+                <path fill="none" class="line diag-left"
+                    d="M728.031,179.768c0,7.972,3.438,11.732,8.963,11.732   c5.149-0.003,10.925-2.652,15.836-9.188" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M757.744,160.621c-2.697-4.652-6.51-6.646-10.193-6.646   c-10.188,0-19.52,11.844-19.52,25.793" />
+                <path fill="none" class="line diag-left" d="M776.155,190.832l7.855-5.752" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M821.212,183.854c0,10.521-10.066,17.377-23.939,17.377   c-7.607,0-16.57-4.201-21.117-10.398" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M797.511,160.063c0,3.98,5.158,5.864,10.313,8.521   c8.965,4.315,13.389,8.628,13.389,15.271" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M818.628,158.29c-3.065-2.771-6.754-5.092-11.537-5.092   c-5.523,0-9.58,3.102-9.58,6.864" />
+                <path fill="none" class="line diag-left" d="M825.997,151.98l-7.369,6.31" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M785.12,161.171c0-9.853,9.938-16.937,21.977-16.937   c7.854,0,14.234,3.313,18.9,7.746" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M808.817,185.293c0-3.425-3.199-5.311-10.813-9.077   c-7.979-3.977-12.885-8.517-12.885-15.045" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M784.011,185.08c3.934,4.646,8.848,7.301,14.246,7.301   c5.646,0,10.561-3.102,10.561-7.088" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M87.203,141.614l-14.445,26.935" />
+                <path fill="none" class="line diag-left" d="M56.853,172.923l30.35-31.309" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M47.447,172.923h9.406" />
+                <path fill="none" class="line diag-right" d="M40.396,136.732l7.051,36.19" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M12.512,196.316l27.884-59.584" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M0,196.325l12.512-0.009" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M38.194,116.688L0,196.325" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M48.209,116.688H38.194" />
+                <path fill="none" class="line diag-right" d="M56.083,157.739l-7.874-41.052" />
+                <path fill="none" class="line diag-left" d="M98.878,116.688l-42.795,41.052" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M112.707,116.688H98.878" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M70.641,197.373l42.066-80.686" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M57.303,197.373h13.338" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M72.758,168.549l-15.455,28.824" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M558.077,186.359l16.559-32.756" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M605.905,186.503l-47.828-0.144" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M600.093,197.373l5.813-10.87" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M537.964,197.373h62.129" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M582.39,111.798l-44.426,85.575" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M595.771,111.798H582.39" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M574.636,153.604l21.136-41.806" />
+                <path fill="none" class="line diag-left" d="M258.788,183.603l4.91,7.642" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M231.657,171.538c-1.354,11.509,5.766,16.386,14.854,16.386   c4.295,0,8.961-2.104,12.277-4.321" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M268.36,171.538h-36.703" />
+                <path fill="none" class="line diag-right"
+                    d="M251.786,139.992c13.992,0,19.15,8.748,19.15,20.033   c0,4.76-1.719,9.738-2.576,11.513" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M218.882,173.979c0.001-20.258,17.067-33.986,32.903-33.986" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M263.698,191.244c-4.91,3.102-12.033,5.756-20.625,5.756   c-14.363,0-24.19-8.41-24.19-23.021" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M232.757,164.016h26.645" />
+                <path fill="none" class="line diag-left" d="M250.193,149.184c-7.242,0-14.486,5.533-17.436,14.832" />
+                <path fill="none" class="line diag-right"
+                    d="M259.402,164.016c0.365-1.438,0.611-2.99,0.611-4.762   c0-5.311-2.457-10.07-9.82-10.07" />
+                <path fill="none" class="line diag-left" d="M133.026,184.073l4.91,7.642" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M105.896,172.009c-1.354,11.509,5.766,16.386,14.854,16.386   c4.295,0,8.961-2.104,12.277-4.321" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M142.599,172.009h-36.703" />
+                <path fill="none" class="line diag-right"
+                    d="M126.024,140.463c13.992,0,19.15,8.748,19.15,20.033   c0,4.76-1.719,9.738-2.576,11.513" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M93.121,174.449c0.001-20.258,17.067-33.986,32.903-33.986" />
+                <path fill="none" class="line hori" stroke-linecap="square"
+                    d="M137.937,191.715c-4.91,3.102-12.033,5.756-20.625,5.756   c-14.363,0-24.19-8.41-24.19-23.021" />
+                <path fill="none" class="line hori" stroke-linecap="square" d="M106.996,164.486h26.645" />
+                <path fill="none" class="line diag-left" d="M124.432,149.654c-7.242,0-14.486,5.533-17.436,14.832" />
+                <path fill="none" class="line diag-right"
+                    d="M133.641,164.486c0.365-1.438,0.611-2.99,0.611-4.762   c0-5.311-2.457-10.07-9.82-10.07" />
+
+            </g>
+        </svg>
+    </section>
+    <script src="lib/js/intro.js"></script>
+</body>
+
+</html>
