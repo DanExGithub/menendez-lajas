@@ -9928,7 +9928,7 @@ body {
 }
 
 #header {
-  background-image: url("../../images/cantera_3.jpeg");
+  background-image: url("../../images/background_intro.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0% 15%;
@@ -9936,7 +9936,7 @@ body {
 }
 
 #nosotros {
-  background-image: url("../../images/cantera_3.jpeg");
+  background-image: url("../../images/background_intro.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0% 50%;
@@ -9946,6 +9946,16 @@ body {
 
 .nos-description {
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+#logo-intro {
+  background-size: cover;
+  background-position: 50% 20%;
+  background-repeat: repeat-y;
+}
+
+#logo-header {
+  visibility: hidden;
 }
 
 #logo-nav {
