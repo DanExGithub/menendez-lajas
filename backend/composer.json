@@ -1,0 +1,25 @@
+{
+    "name": "mdc3/rapibnb",
+    "description": "Composer en RapiBnB",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marcelo Cuello",
+            "email": "marusero08@gmail.com"
+        }
+    ],
+    "require": {
+        "components/jquery": "^3.3",
+        "twitter/bootstrap": "^4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Config\\": "api/config",
+            "Core\\": "api/core",
+            "Model\\": "api/model",
+            "Controller\\": "api/controller",
+            "View\\": "api/view"
+        }
+    }
+}

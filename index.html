@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="menendezApp">
 
 <head>
     <title>Menendez Lajas</title>
@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="lib/lightgallery/dist/css/lightgallery.css">
     <link rel="stylesheet" href="lib/lightgallery/dist/css/lg-transitions.css">
     <link rel="stylesheet" type="text/css" href="lib/css/style.css">
+    <script src="backend/vendor/components/jquery/jquery.min.js"></script>
+    <script src="backend/lib/jquery.validate.js"></script>
+    <!-- Include AngularJS library -->
+    <script src="backend/lib/angularjs/angular.min.js"></script>
+    <script src="backend/lib/angularjs/angular-validate.min.js"></script>
 
 </head>
 <!--ICONOS TIPOS DE PIEDRA-->
@@ -1170,41 +1175,33 @@
                     </div>
                 </div>
                 
-                <div id="form-contacto" class="row justify-content-center text-white">
+                <div id="form-contacto" class="row justify-content-center text-white" ng-controller="ContactoCtrl" ng-cloak>
                     <div class="col-md-8 p-3">
 
                         <!-- <h1 class="text-center text-dark ">Contacto</h1> -->
-                        <form class="needs-validation" novalidate="">
+                        <form name="frm_contacto" id="contacto_frm" ng-submit="contactoSend(frm_contacto)" ng-validate="validationOptions" novalidate>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
-                                    <label for="firstName">Nombre</label>
-                                    <input type="text" class="form-control" id="firstName" placeholder="" value=""
-                                        required="">
-                                    <div class="invalid-feedback">
-                                        Valid first name is required.
-                                    </div>
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" name="nombre" class="form-control" id="nombre" ng-model="contacto.nombre">
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <label for="lastName">Apellido</label>
-                                    <input type="text" class="form-control" id="lastName" placeholder="" value=""
-                                        required="">
-                                    <div class="invalid-feedback">
-                                        Valid last name is required.
-                                    </div>
+                                    <label for="apellido">Apellido</label>
+                                    <input type="text" name="apellido" class="form-control" id="apellido" ng-model="contacto.apellido">
                                 </div>
                             </div>
 
                             <div class="mb-3">
                                 <label for="email">Email </label>
-                                <input type="email" class="form-control" id="email" placeholder="tu@mail.com">
-                                <div class="invalid-feedback">
-                                    Please enter a valid email address for shipping updates.
-                                </div>
+                                <input type="email" name="email" class="form-control" id="email" ng-model="contacto.email">
                             </div>
 
                             <div class="mb-3">
-                                <label for="address2">Mensaje</label>
-                                <textarea rows="10" cols="10" class="form-control" placeholder=""></textarea>
+                                <label for="mensaje">Mensaje</label>
+                                <textarea rows="10" name="mensaje" cols="10" class="form-control" placeholder="" ng-model="contacto.mensaje"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <p class="text-danger">{{loginError}}</p>
                             </div>
                             <hr class="mb-4">
                             <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar Mensaje</button>
@@ -1261,6 +1258,27 @@
     <script src="lib/lightgallery/dist/js/lg-fullscreen.min.js"></script>
     <script src="lib/js/intro.js"></script>
     <script type="text/javascript" src="lib/js/main.js"></script>
+    <script src="backend/js/angular-contacto.js"></script>
+    <script>
+    // Disable form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Get the forms we want to add validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
 </body>
 
 </html>
