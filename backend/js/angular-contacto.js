@@ -55,6 +55,7 @@ angular.module('menendezApp', ['ngValidate'])
                     $scope.messageMail = response.data.message;
                     if (response.data.status){
                         $scope.messageMailClass = "alert-success";
+                        this.frm_contacto.reset();
                     }else{
                         $scope.messageMailClass = "alert-danger";
                     }
