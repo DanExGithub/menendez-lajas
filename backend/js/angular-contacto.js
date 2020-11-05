@@ -52,7 +52,13 @@ angular.module('menendezApp', ['ngValidate'])
                 jsonData = $scope.prepareDataToSend();
                 console.log(jsonData);
                 datosAjax.sendContactoData(jsonData).then(function(response) {
-                    $scope.loginError = response.data.message;
+                    $scope.messageMail = response.data.message;
+                    if (response.data.status){
+                        $scope.messageMailClass = "alert-success";
+                    }else{
+                        $scope.messageMailClass = "alert-danger";
+                    }
+
                 });
             }
         }
