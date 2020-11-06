@@ -50,7 +50,10 @@ angular.module('menendezApp', ['ngValidate'])
         $scope.contactoSend = function(form){
             if (form.validate()) {
                 jsonData = $scope.prepareDataToSend();
-                console.log(jsonData);
+                //mostrar mensaje del estado de mail
+                $("#messageMail").collapse('show');
+                $("#btn-form-contact .spinner-border").removeClass("d-none");
+
                 datosAjax.sendContactoData(jsonData).then(function(response) {
                     $scope.messageMail = response.data.message;
                     if (response.data.status){
@@ -58,7 +61,13 @@ angular.module('menendezApp', ['ngValidate'])
                         this.frm_contacto.reset();
                     }else{
                         $scope.messageMailClass = "alert-danger";
+                        console.log("ErrorMail: "+ response.data.errorServer);
                     }
+                    //Ocultar mensaje de procesado de mail
+                    $("#btn-form-contact .spinner-border").addClass("d-none");
+                    setTimeout(function(){
+                        $("#messageMail").collapse('hide');
+                    },4000);
 
                 });
             }

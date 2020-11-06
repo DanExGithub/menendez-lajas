@@ -102,10 +102,10 @@ function enviar_email($From,$FromName,$To,$body,$subject,$CC=array(),$BCC=array(
   $mail->Subject = $subject;
   $mail->Body = $body;
   $exito = $mail->Send();
-   echo $mail->ErrorInfo;
+   error_log("EnviarMail: (".$mail->ErrorInfo.")" );
 
   if(!$exito){
-	  return false;
+	  return $mail->ErrorInfo;
   }
   return true;
 }   

@@ -300,6 +300,12 @@ nav.btn-bar {
     background-position: 0% 34%;
     background-attachment:inherit;
 }
+#form-contacto .error{
+    background-color: rgba(#000, 0.6);
+    color: rgb(255, 38, 0);
+    margin: 2px;
+    padding:2px;
+}
 
 /***************************************************************************/
 /***************************************************************************/
@@ -311,5 +317,6 @@ nav.btn-bar {
 
 footer{
     background-color: black;
+    display: block;
     
 }

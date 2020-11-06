@@ -21,8 +21,10 @@ function sendMail($nombre,$apellido,$email,$mensaje){
             Email: $email<br>
             Mensaje: $mensaje<br>";
     $asunto = 'Contacto Web';
-        
-    if (enviar_email($from,$from_name,trim($to),$body,$asunto)===true){
+    
+    $resultSendEmail = enviar_email($from,$from_name,trim($to),$body,$asunto);
+
+    if ($resultSendEmail===true){
         $strStatus = 1;
         $strMessage = "Los datos se enviaron exitosamente";
     }else{
@@ -31,8 +33,9 @@ function sendMail($nombre,$apellido,$email,$mensaje){
     }
     
     $arrResult = array(
-        "status"    =>  $strStatus,
-        "message"   =>  $strMessage
+        "status"      =>  $strStatus,
+        "message"     =>  $strMessage,
+        "errorServer" =>  $resultSendEmail
     );
     
     return json_encode($arrResult);
