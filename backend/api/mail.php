@@ -69,8 +69,8 @@ function enviar_email($From,$FromName,$To,$body,$subject,$CC=array(),$BCC=array(
   $mail->Timeout=30;
   $mail->IsHTML(true);
   $mail->SMTPAuth = true;
-  $mail->Username = "sebastian.menendez@menendezlajas.com.ar";
-  $mail->Password = "sebastian915";
+  $mail->Username = "sendermail@menendezlajas.com.ar";
+  $mail->Password = "sender";
   //$mail->PluginDir = MAIL_PLUGIN_DIR;
   //$mail->SMTPDebug = 4; // setup a level to enable debugging (default output: echo)
   // disable SSL Certificate verification (not secure, SSL config recommended)
